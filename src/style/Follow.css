@@ -1,0 +1,238 @@
+/* =========================================================
+   Follow — 팔로워 / 팔로잉 목록 페이지
+   ========================================================= */
+
+.follow-page {
+    --ink: #16160F;
+    --ink-2: #5C5C52;
+    --ink-3: #9C9C90;
+    --line: #E9E7D6;
+    --paper: #FFFFFF;
+    --accent: #20D793;
+    --accent-deep: #0FA871;
+    --accent-soft: #E7FAF2;
+
+    width: 100%;
+    min-height: 100%;
+    padding: 8px 16px 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 상단 */
+.follow-page-head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 0 14px;
+}
+
+.follow-back {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    font-family: inherit;
+    font-size: 26px;
+    line-height: 1;
+    color: var(--ink);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.follow-back:hover {
+    background-color: rgba(22, 22, 15, 0.06);
+}
+
+.follow-page-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: -0.4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 탭 */
+.follow-tabs {
+    display: flex;
+    gap: 22px;
+    padding: 0 6px;
+    border-bottom: 1px solid var(--line);
+}
+
+.follow-tab {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 2px 12px;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink-3);
+    letter-spacing: -0.2px;
+    cursor: pointer;
+    transition: color 0.15s ease;
+}
+
+.follow-tab:hover {
+    color: var(--ink-2);
+}
+
+.follow-tab.active {
+    color: var(--ink);
+}
+
+.follow-tab.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 3px;
+    border-radius: 3px 3px 0 0;
+    background-color: var(--accent);
+}
+
+.follow-tab-num {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--ink-3);
+}
+
+.follow-tab.active .follow-tab-num {
+    color: var(--accent-deep);
+}
+
+/* 목록 */
+.follow-list {
+    padding: 6px 0;
+}
+
+.follow-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 4px;
+    border-bottom: 1px solid #F4F3EA;
+}
+
+.follow-item:last-child {
+    border-bottom: none;
+}
+
+.follow-avatar {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--accent-soft);
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.follow-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.follow-avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #E4E2D4;
+}
+
+.follow-name {
+    flex: 1;
+    min-width: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.follow-btn {
+    flex-shrink: 0;
+    height: 36px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--accent);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.follow-btn:hover {
+    background-color: var(--accent-deep);
+}
+
+.follow-btn.off {
+    background-color: #F4F3EA;
+    color: var(--ink-2);
+}
+
+.follow-btn.off:hover {
+    background-color: #EBEAE0;
+}
+
+/* 빈 화면 */
+.follow-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 80px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-3);
+}
+
+.follow-empty-icon {
+    font-size: 32px;
+    opacity: 0.45;
+}
+
+.follow-empty-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-3);
+}
+
+.follow-empty-btn {
+    margin-top: 4px;
+    height: 44px;
+    padding: 0 22px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background-color: var(--paper);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.follow-empty-btn:hover {
+    background-color: #FAFAF3;
+}

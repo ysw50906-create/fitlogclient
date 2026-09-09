@@ -1,0 +1,784 @@
+/* ==========================================
+   전체
+   ========================================== */
+
+.main-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+    background: #fafafa;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   공지사항
+   ========================================== */
+
+.notice-banner {
+    width: 100%;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding: 16px 18px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+
+/* ------------------------------------------
+   공지사항 헤더
+   ------------------------------------------ */
+
+.notice-banner-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.notice-banner-header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+}
+
+.notice-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #e9fbf4;
+    font-size: 15px;
+}
+
+
+/* ------------------------------------------
+   전체보기
+   ------------------------------------------ */
+
+.notice-banner-more {
+    border: none;
+    background: transparent;
+    color: #999;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 4px 0;
+    transition: color 0.2s ease;
+}
+
+.notice-banner-more:hover {
+    color: #555;
+}
+
+
+/* ==========================================
+   공지사항 슬라이더 영역
+   ========================================== */
+
+.notice-content-wrapper {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+/* ------------------------------------------
+   Slick Slider
+   ------------------------------------------ */
+
+.notice-content-wrapper .slick-slider {
+    position: relative;
+    width: 100%;
+}
+
+.notice-content-wrapper .slick-list {
+    width: 100%;
+    overflow: hidden;
+}
+
+.notice-content-wrapper .slick-track {
+    display: flex;
+}
+
+.notice-content-wrapper .slick-slide {
+    height: auto;
+}
+
+.notice-content-wrapper .slick-slide>div {
+    height: 100%;
+}
+
+
+/* ==========================================
+   공지사항 한 개
+   ========================================== */
+
+.notice-slide-item {
+    width: 100%;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0 2px;
+    box-sizing: border-box;
+}
+/* 카테고리 */
+.category {
+    width: 100%;
+    padding: 0 2px;
+    box-sizing: border-box;
+}
+
+
+/* 공지 카드 */
+
+.notice-banner-slide {
+    position: relative;
+    width: 100%;
+    min-height: 72px;
+    padding: 16px 58px 16px 48px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-radius: 13px;
+    background: #f7f8f8;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.notice-banner-slide:hover {
+    background: #f1f3f3;
+    transform: translateY(-1px);
+}
+
+
+/* ------------------------------------------
+   공지 제목
+   ------------------------------------------ */
+
+.notice-banner-title {
+    display: block;
+
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+
+    margin: 0 0 7px 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ------------------------------------------
+   공지 작성일
+   ------------------------------------------ */
+
+.notice-banner-date {
+    display: block;
+
+    font-size: 11px;
+    color: #aaa;
+
+    margin: 0;
+}
+
+
+/* ==========================================
+   좌우 화살표
+   ========================================== */
+
+.notice-content-wrapper .notice-arrow {
+    position: absolute !important;
+
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+
+    width: 26px !important;
+    height: 26px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+    outline: none !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    color: #000 !important;
+
+    font-size: 20px !important;
+    font-weight: 400;
+    line-height: 1 !important;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    z-index: 100 !important;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Slick 기본 화살표 가상요소 제거 */
+
+.notice-content-wrapper .notice-arrow::before,
+.notice-content-wrapper .notice-arrow::after {
+    display: none !important;
+    content: none !important;
+}
+
+
+/* ------------------------------------------
+   왼쪽 화살표
+   ------------------------------------------ */
+
+.notice-content-wrapper .notice-arrow-prev {
+    left: 14px !important;
+}
+
+
+/* ------------------------------------------
+   오른쪽 화살표
+   ------------------------------------------ */
+
+.notice-content-wrapper .notice-arrow-next {
+    right: 14px !important;
+}
+
+
+/* ------------------------------------------
+   화살표 hover
+   ------------------------------------------ */
+
+.notice-content-wrapper .notice-arrow:hover {
+    color: #000 !important;
+    background: transparent !important;
+}
+
+
+/* ------------------------------------------
+   Slick 기본 화살표 제거
+   ------------------------------------------ */
+
+.notice-content-wrapper .slick-prev::before,
+.notice-content-wrapper .slick-next::before {
+    display: none !important;
+    content: none !important;
+}
+
+
+/* ==========================================
+   공지사항이 없을 때
+   ========================================== */
+
+.notice-empty {
+    width: 100%;
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border-radius: 13px;
+    background: #f7f8f8;
+
+    color: #aaa;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   목표 카드
+   ========================================== */
+
+.goal-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    margin: 20px 0;
+
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.goal-card {
+    flex: 1;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    padding: 18px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------------------
+   목표 헤더
+   ------------------------------------------ */
+
+.goal-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 14px;
+}
+
+.goal-card-header h3 {
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #2d3748;
+}
+
+
+/* ------------------------------------------
+   목표 설정 버튼
+   ------------------------------------------ */
+
+.goal-edit-btn {
+    background-color: #f7fafc;
+
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+
+    padding: 4px 10px;
+
+    font-size: 12px;
+    color: #4a5568;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.goal-edit-btn:hover {
+    background-color: #edf2f7;
+    color: #2d3748;
+}
+
+
+/* ------------------------------------------
+   대표 목표
+   ------------------------------------------ */
+
+.goal-main-value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #edf2f7;
+
+    margin-bottom: 12px;
+}
+
+.goal-main-value span {
+    font-size: 13px;
+    color: #718096;
+}
+
+.goal-main-value strong {
+    font-size: 18px;
+    color: #3182ce;
+}
+
+
+/* ------------------------------------------
+   세부 목표
+   ------------------------------------------ */
+
+.goal-sub-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.sub-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #f8fafc;
+
+    padding: 8px 4px;
+
+    border-radius: 8px;
+
+    flex: 1;
+}
+
+.sub-item span {
+    font-size: 11px;
+    color: #718096;
+}
+
+.sub-item strong {
+    font-size: 13px;
+    color: #2d3748;
+
+    margin-top: 4px;
+}
+
+
+/* ==========================================
+   모달
+   ========================================== */
+
+.modal-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #ffffff;
+
+    padding: 24px;
+
+    border-radius: 14px;
+
+    width: 340px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+
+    font-size: 18px;
+    color: #1a202c;
+
+    text-align: center;
+}
+
+.modal-content label {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 13px;
+
+    margin-bottom: 12px;
+
+    color: #4a5568;
+
+    font-weight: 500;
+}
+
+.modal-content input {
+    margin-top: 6px;
+
+    padding: 10px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: border-color 0.2s;
+}
+
+.modal-content input:focus {
+    border-color: #3182ce;
+}
+
+
+/* ------------------------------------------
+   모달 버튼
+   ------------------------------------------ */
+
+.modal-btn-group {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.modal-btn-group button {
+    padding: 9px 18px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    border: none;
+
+    transition: background-color 0.2s;
+}
+
+.modal-btn-group button[type="button"] {
+    background: #edf2f7;
+    color: #4a5568;
+}
+
+.modal-btn-group button[type="button"]:hover {
+    background: #e2e8f0;
+}
+
+.modal-btn-group .save-btn {
+    background: #3182ce;
+    color: #ffffff;
+}
+
+.modal-btn-group .save-btn:hover {
+    background: #2b6cb0;
+}
+
+
+/* ==========================================
+   카테고리
+   ========================================== */
+
+.category {
+    width: 100%;
+
+    margin-top: 18px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.category>div {
+    position: relative;
+
+    width: 100%;
+    height: 125px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: flex-end;
+
+    border: none;
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #222;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    cursor: pointer;
+}
+
+
+/* 오른쪽 화살표 */
+
+.category>div::after {
+    content: "›";
+
+    position: absolute;
+
+    right: 22px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f7f7f7;
+
+    color: #999;
+
+    font-size: 22px;
+}
+
+.category>div:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ------------------------------------------
+   식사
+   ------------------------------------------ */
+
+.category>div:nth-child(1) {
+    background: linear-gradient(135deg,
+            #fff8f4,
+            #ffffff);
+}
+
+.category>div:nth-child(1)::before {
+    content: "🍽️";
+
+    position: absolute;
+
+    right: 65px;
+    top: 20px;
+
+    font-size: 38px;
+}
+
+
+/* ------------------------------------------
+   체중
+   ------------------------------------------ */
+
+.category>div:nth-child(2) {
+    background: linear-gradient(135deg,
+            #f5f9ff,
+            #ffffff);
+}
+
+.category>div:nth-child(2)::before {
+    content: "⚖️";
+
+    position: absolute;
+
+    right: 65px;
+    top: 20px;
+
+    font-size: 36px;
+}
+
+
+/* ------------------------------------------
+   운동
+   ------------------------------------------ */
+
+.category>div:nth-child(3) {
+    background: linear-gradient(135deg,
+            #f4fff8,
+            #ffffff);
+}
+
+.category>div:nth-child(3)::before {
+    content: "🏃";
+
+    position: absolute;
+
+    right: 65px;
+    top: 20px;
+
+    font-size: 36px;
+}
+
+
+/* ==========================================
+   모바일
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .goal-container {
+        flex-direction: column;
+    }
+
+    .notice-banner {
+        padding: 14px;
+    }
+
+    .notice-banner-slide {
+        min-height: 68px;
+
+        padding:
+            15px 44px 15px 34px;
+    }
+
+    .notice-banner-title {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .notice-banner-date {
+        font-size: 10px;
+    }
+
+    .notice-content-wrapper .notice-arrow {
+        width: 22px !important;
+        height: 22px !important;
+
+        font-size: 17px !important;
+    }
+
+    .notice-content-wrapper .notice-arrow-prev {
+        left: 8px !important;
+    }
+
+    .notice-content-wrapper .notice-arrow-next {
+        right: 8px !important;
+    }
+}

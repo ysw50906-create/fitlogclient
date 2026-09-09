@@ -1,0 +1,445 @@
+.mypage-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #fafafa;
+}
+
+/* 프로필 카드 */
+.mypage-profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 28px 20px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.mypage-avatar {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 6px;
+}
+
+.mypage-avatar.editable {
+    cursor: pointer;
+}
+
+.mypage-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mypage-avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #E8E8E8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+    line-height: 1;
+}
+
+.mypage-camera-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mypage-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+}
+
+.mypage-name-input {
+    width: 160px;
+    height: 38px;
+    padding: 0 12px;
+    border: 2px solid #EAEAEA;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #111;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.mypage-name-input:focus {
+    border-color: #20D793;
+}
+
+.mypage-id {
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* 신체 정보 */
+.mypage-stats-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.mypage-stat-item {
+    flex: 1;
+    text-align: center;
+}
+
+.mypage-stat-label {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 6px;
+}
+
+.mypage-stat-value {
+    font-size: 20px;
+    font-weight: bold;
+    color: #20D793;
+}
+
+.mypage-stat-value.small {
+    font-size: 14px;
+    color: #333;
+}
+
+.mypage-stat-unit {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    margin-left: 2px;
+}
+
+.mypage-stat-input {
+    width: 70px;
+    height: 34px;
+    padding: 0 8px;
+    border: 2px solid #EAEAEA;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #111;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.mypage-stat-input:focus {
+    border-color: #20D793;
+}
+
+.mypage-stat-divider {
+    width: 1px;
+    height: 36px;
+    background-color: #EEE;
+}
+
+/* 상세 정보 */
+.mypage-section {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.mypage-section-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 16px;
+}
+
+.mypage-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.mypage-field:last-child {
+    margin-bottom: 0;
+}
+
+.mypage-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+}
+
+.mypage-value {
+    font-size: 14px;
+    color: #333;
+    padding: 10px 0;
+    line-height: 1.5;
+}
+
+.mypage-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border: 2px solid #EAEAEA;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #111;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.mypage-input:focus {
+    border-color: #20D793;
+}
+
+.mypage-input[readonly] {
+    background-color: #F9F9F9;
+    color: #666;
+}
+
+.mypage-address-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mypage-zip-row {
+    display: flex;
+    gap: 8px;
+}
+
+.mypage-zip-input {
+    flex: 1;
+}
+
+.mypage-zip-btn {
+    flex-shrink: 0;
+    height: 44px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #20D793;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.mypage-zip-btn:hover {
+    background-color: #1bc082;
+}
+
+/* 버튼 */
+.mypage-edit-btn {
+    width: 100%;
+    height: 50px;
+    background-color: #20D793;
+    color: #ffffff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.mypage-edit-btn:hover {
+    background-color: #1bc082;
+}
+
+.mypage-btn-row {
+    display: flex;
+    gap: 8px;
+}
+
+.mypage-cancel-btn,
+.mypage-save-btn {
+    flex: 1;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.mypage-cancel-btn {
+    background-color: #F1F1F1;
+    color: #555;
+}
+
+.mypage-save-btn {
+    background-color: #20D793;
+    color: #ffffff;
+}
+
+.mypage-save-btn:hover {
+    background-color: #1bc082;
+}
+
+/* 계정 관리 */
+.mypage-account-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+}
+
+.mypage-account-item {
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.mypage-account-item:last-child {
+    border-bottom: none;
+}
+
+.mypage-account-item:hover {
+    background-color: #F9F9F9;
+}
+
+.mypage-account-item.withdraw {
+    color: #FF5C5C;
+}
+
+.mypage-phone-input {
+    display: block;
+    width: 200px;
+    height: 32px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    background: #fff;
+    color: #333;
+    font-size: 13px;
+    text-align: center;
+
+    outline: none;
+    box-sizing: border-box;
+}
+
+.mypage-phone-input:focus {
+    border-color: #4f7cff;
+    box-shadow: 0 0 0 2px rgba(79, 124, 255, 0.08);
+}
+
+.mypage-phone-input::placeholder {
+    color: #aaa;
+}
+
+.mypage-phone {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+
+    color: #555;
+    font-size: 14px;
+}
+
+/* 이메일 */
+.mypage-email {
+    font-size: 13px;
+    color: #888;
+}
+
+.mypage-email-input {
+    display: block;
+    width: 200px;
+    height: 32px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    background: #fff;
+    color: #333;
+    font-size: 13px;
+    text-align: center;
+
+    outline: none;
+    box-sizing: border-box;
+}
+
+.mypage-email-input:focus {
+    border-color: #4f7cff;
+    box-shadow: 0 0 0 2px rgba(79, 124, 255, 0.08);
+}
+
+.mypage-email-input::placeholder {
+    color: #aaa;
+}
+
+/* 구독 상태 카드 */
+.mypage-sub-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.mypage-sub-label {
+    font-size: 12px;
+    color: #888;
+}
+
+.mypage-sub-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #20D793;
+}
+
+.mypage-sub-value.expired {
+    font-size: 18px;
+    color: #FF5C5C;
+}
+
+.mypage-sub-date {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.mypage-sub-empty {
+    font-size: 13px;
+    color: #aaa;
+    padding: 4px 0;
+}

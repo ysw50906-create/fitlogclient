@@ -1,0 +1,453 @@
+.exlog-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 주간 날짜 + 날짜 헤더 (스크롤 시 상단 고정) */
+/* 주간 날짜 선택 */
+.exlog-week-wrapper {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 12px 8px;
+}
+
+.exlog-week-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px 10px 8px;
+}
+
+.exlog-week-nav-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #888;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.exlog-week-nav-btn:hover {
+    background-color: #F5F5F5;
+    color: #20D793;
+}
+
+.exlog-week-range {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+
+.exlog-week {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    padding-bottom: 10px;
+}
+
+.exlog-week-day {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.exlog-week-day:hover {
+    background-color: #F5F5F5;
+}
+
+.exlog-week-weekday {
+    font-size: 11px;
+    color: #aaa;
+    font-weight: 600;
+}
+
+.exlog-week-date {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.exlog-week-day.selected {
+    background-color: #20D793;
+}
+
+.exlog-week-day.selected .exlog-week-weekday,
+.exlog-week-day.selected .exlog-week-date {
+    color: #ffffff;
+}
+
+.exlog-week-today-dot {
+    position: absolute;
+    bottom: 3px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #20D793;
+}
+
+.exlog-week-day.selected .exlog-week-today-dot {
+    background-color: #ffffff;
+}
+
+/* 날짜 헤더 (헤더 카드 하단) */
+/* 날짜 헤더 */
+.exlog-date-header {
+    padding: 16px 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* 요약 카드 */
+.exlog-summary-card {
+    padding: 28px 20px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exlog-summary-empty {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.exlog-summary-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 24px;
+}
+
+.exlog-summary-item {
+    flex: 1;
+    text-align: center;
+}
+
+.exlog-summary-label {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.exlog-summary-value {
+    font-size: 22px;
+    font-weight: bold;
+    color: #20D793;
+}
+
+.exlog-summary-unit {
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    margin-left: 4px;
+}
+
+.exlog-summary-divider {
+    width: 1px;
+    height: 40px;
+    background-color: #EAEAEA;
+}
+
+/* 추가 버튼 (스크롤 시 하단 고정) */
+.exlog-add-row {
+    position: sticky;
+    bottom: 16px;
+    z-index: 15;
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    pointer-events: none;
+}
+
+.exlog-add-btn {
+    padding: 12px 20px;
+    background-color: #20D793;
+    color: #ffffff;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(32, 215, 147, 0.4);
+    pointer-events: auto;
+}
+
+.exlog-add-btn:hover {
+    background-color: #1bc082;
+}
+
+/* 운동 목록 */
+.exlog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exlog-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.exlog-item-main {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.exlog-item-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+}
+
+.exlog-item-meta {
+    font-size: 13px;
+    color: #888;
+}
+
+.exlog-item-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.exlog-item-cal {
+    font-size: 14px;
+    font-weight: bold;
+    color: #20D793;
+    white-space: nowrap;
+}
+
+.exlog-item-delete {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.exlog-item-delete:hover {
+    color: #FF5C5C;
+}
+
+.exlog-list-empty {
+    padding: 32px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* 모달 */
+.exlog-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.exlog-modal {
+    width: 320px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
+
+.exlog-modal-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.exlog-modal-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: #aaa;
+    font-weight: 600;
+}
+
+.exlog-modal-divider::before,
+.exlog-modal-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: #EFEFEF;
+}
+
+.exlog-modal-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.exlog-modal-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.exlog-modal-input {
+    height: 44px;
+    padding: 0 14px;
+    border: 2px solid #EAEAEA;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #111;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.exlog-modal-input:focus {
+    border-color: #20D793;
+}
+
+.exlog-modal-name-input {
+    flex: 1;
+    min-width: 0;
+}
+
+.exlog-modal-time-wrapper {
+    position: relative;
+    width: 84px;
+    flex-shrink: 0;
+}
+
+.exlog-modal-time-input {
+    width: 100%;
+    padding-right: 30px;
+    text-align: right;
+}
+
+.exlog-modal-unit {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: #888;
+    pointer-events: none;
+}
+
+.exlog-modal-row-delete {
+    width: 20px;
+    flex-shrink: 0;
+    text-align: center;
+    color: #ccc;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.exlog-modal-row-delete:hover {
+    color: #FF5C5C;
+}
+
+.exlog-modal-add-row-btn {
+    margin-top: 12px;
+    padding: 10px;
+    text-align: center;
+    border: 1px dashed #DDD;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    cursor: pointer;
+}
+
+.exlog-modal-add-row-btn:hover {
+    border-color: #20D793;
+    color: #20D793;
+}
+
+.exlog-modal-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.exlog-modal-cancel-btn,
+.exlog-modal-save-btn {
+    flex: 1;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.exlog-modal-cancel-btn {
+    background-color: #F1F1F1;
+    color: #555;
+}
+
+.exlog-modal-save-btn {
+    background-color: #20D793;
+    color: #ffffff;
+}
+
+.exlog-modal-save-btn:hover {
+    background-color: #1bc082;
+}
+
+.exlog-modal-save-btn.loading {
+    background-color: #A8E8CE;
+    cursor: default;
+}
+
+.exlog-modal-selected-date,
+.meallog-modal-selected-date {
+    font-size: 13px;
+    color: #20D793;
+    text-align: center;
+    margin-bottom: 14px;
+}

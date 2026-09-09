@@ -1,0 +1,174 @@
+.company-info-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+.company-info-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.company-info-title {
+    font-size: 21px;
+    font-weight: 700;
+    color: #222;
+    padding-bottom: 18px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.company-info-row {
+    display: flex;
+    align-items: center;
+    min-height: 55px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.company-info-row:last-child {
+    border-bottom: none;
+}
+
+.company-info-label {
+    width: 160px;
+    flex-shrink: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.company-info-value {
+    color: #222;
+    font-size: 15px;
+    word-break: break-all;
+}
+
+.company-map {
+    width: 100%;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f5f5f5;
+}
+
+.company-map-container {
+    width: 100%;
+    height: 350px;
+}
+
+.company-map-address {
+    padding-top: 14px;
+    color: #555;
+    font-size: 14px;
+}
+
+/* 이용약관 / 개인정보처리방침 영역 */
+.company-terms {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* 스크롤바 */
+.company-terms::-webkit-scrollbar {
+    width: 6px;
+}
+
+.company-terms::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.company-terms::-webkit-scrollbar-thumb {
+    background: #c9c9c9;
+    border-radius: 10px;
+}
+
+.company-terms::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+.company-terms-title {
+    margin-top: 24px;
+    margin-bottom: 10px;
+
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+}
+
+.company-terms-title:first-child {
+    margin-top: 10px;
+}
+
+.company-terms-content {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+    word-break: keep-all;
+}
+
+.company-footer {
+    padding: 25px 5px 10px;
+    color: #888;
+}
+
+.company-footer-name {
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.company-footer-info {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+
+    .company-info-container {
+        padding: 20px 12px 40px;
+    }
+
+    .company-info-card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .company-info-title {
+        font-size: 19px;
+    }
+
+    .company-info-row {
+        display: block;
+        padding: 13px 0;
+    }
+
+    .company-info-label {
+        width: auto;
+        margin-bottom: 6px;
+        font-size: 13px;
+    }
+
+    .company-info-value {
+        font-size: 14px;
+    }
+
+    .company-map-container {
+        width: 100%;
+        height: 350px;
+    }
+
+    .company-terms-content {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+}

@@ -1,0 +1,271 @@
+.chat-container {
+    position: fixed;
+
+    /* 중앙의 .App 오른쪽에서 10px 떨어지도록 */
+    left: calc(50% + 247.5px + 10px);
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 9999;
+}
+
+.chat-window {
+    width: 360px;
+
+    /* 기존보다 세로로 길게 */
+    height: 750px;
+    max-height: calc(100vh - 40px);
+
+    background-color: white;
+
+    border-radius: 16px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+/* =========================
+   Header
+========================= */
+
+.chat-header {
+    height: 60px;
+    flex-shrink: 0;
+    padding: 0 12px 0 18px;   /* 오른쪽 패딩만 살짝 줄임 */
+
+    background-color: #20D793;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   /* 타이틀은 왼쪽, 버튼은 오른쪽 */
+}
+
+.chat-close-button {
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background: none;
+
+    color: white;
+    font-size: 18px;
+    line-height: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: background-color 0.15s ease;
+}
+
+.chat-close-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.chat-header-title {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.chat-header-icon {
+    font-size: 22px;
+}
+
+/* =========================
+   Messages
+========================= */
+
+.chat-messages {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 20px 15px;
+
+    background-color: #f7f7f8;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+    white-space: pre-wrap;
+}
+
+.chat-welcome {
+    margin: auto;
+
+    text-align: center;
+
+    color: #555;
+}
+
+.chat-welcome-icon {
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+
+.chat-welcome-title {
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+.chat-welcome-text {
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+/* =========================
+   Message
+========================= */
+
+.chat-message {
+    max-width: 75%;
+
+    padding: 10px 13px;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+.chat-message--user {
+    align-self: flex-end;
+
+    background-color: #20D793;
+
+    color: white;
+
+    border-bottom-right-radius: 4px;
+}
+
+.chat-message--ai {
+    align-self: flex-start;
+
+    background-color: white;
+
+    color: #333;
+
+    border: 1px solid #e5e5e5;
+
+    border-bottom-left-radius: 4px;
+}
+
+/* =========================
+   Input
+========================= */
+
+.chat-input-container {
+    min-height: 64px;
+
+    padding: 10px;
+
+    background-color: white;
+
+    border-top: 1px solid #eee;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 8px;
+}
+
+.chat-input {
+    flex: 1;
+
+    min-height: 42px;
+
+    max-height: 100px;
+
+    padding: 11px 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    resize: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    box-sizing: border-box;
+}
+
+.chat-input:focus {
+    border-color: #20D793;
+}
+
+.chat-send-button {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #20D793;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.chat-send-button:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   작은 화면
+========================= */
+
+@media (max-width: 900px) {
+
+    .chat-container {
+        position: absolute;
+        left: 30px;
+        right: 20px;      /* left + right로 폭이 명확하게 계산됨 */
+        top: 50%;
+        transform: translateY(-50%);
+
+        display: flex;
+        justify-content: center;   /* max-width로 줄어들 때 중앙 유지 */
+    }
+
+    .chat-window {
+        width: 100%;
+        max-width: 400px;
+
+        max-height: calc(100% - 40px);
+    }
+
+}

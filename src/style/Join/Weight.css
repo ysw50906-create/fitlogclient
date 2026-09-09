@@ -1,0 +1,136 @@
+.weight-container {
+    width: 475px;
+    min-height: 500px;
+    padding: 24px;
+    background-color: #FFFFF0;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.weight-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.weight-back-btn {
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    user-select: none;
+}
+
+.weight-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.weight-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.weight-dot.active {
+    width: 20px;
+    background-color: #20D793;
+    border-radius: 4px;
+}
+
+.weight-content {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weight-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    color: #111;
+}
+
+.weight-input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #ffffff;
+    border: 2px solid #EAEAEA;
+    border-radius: 14px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    width: 160px;
+}
+
+.weight-input {
+    border: none;
+    outline: none;
+    width: 60px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #111;
+    background: transparent;
+}
+
+.weight-unit {
+    font-size: 16px;
+    color: #888;
+    font-weight: 500;
+}
+
+.weight-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    overflow-y: auto;
+    max-height: 180px;
+    width: 100%;
+}
+
+.weight-list-item {
+    padding: 6px 24px;
+    border-radius: 10px;
+    color: #aaa;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.weight-list-item.selected {
+    border: 2px solid #20D793;
+    color: #20D793;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+.weight-next-btn {
+    width: 100%;
+    height: 52px;
+    background-color: #20D793;
+    color: #ffffff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}

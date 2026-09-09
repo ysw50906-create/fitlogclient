@@ -1,0 +1,26 @@
+.App {
+  width: 475px;
+  height: 100vh;
+  height: 100dvh;
+  max-height: 953px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFF0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.App--no-bg {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.App-content {
+  flex: 1;
+  overflow-y: auto;
+  box-sizing: border-box;
+  position: static;
+}

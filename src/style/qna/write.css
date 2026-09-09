@@ -1,0 +1,88 @@
+.community-write {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #ffffff;
+}
+
+/* 제목 */
+.community-write .title input {
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* 내용 */
+.community-write .post textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    font-size: 15px;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* 사진 첨부 영역 */
+.community-photo {
+    width: 100%;
+}
+
+.photo-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 180px;
+    border: 2px dashed #CCCCCC;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: #FAFAFA;
+    overflow: hidden;
+    color: #888888;
+}
+
+.preview-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 하단 버튼 영역 */
+.community-post {
+    display: flex;
+    gap: 12px;
+    margin-top: auto; /* 하단으로 밀어주기 */
+    padding-bottom: 20px;
+}
+
+.community-post button {
+    flex: 1;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    background-color: #F0F0F0;
+    color: #666666;
+}
+
+.btn-submit {
+    background-color: #20D793;
+    color: #ffffff;
+}

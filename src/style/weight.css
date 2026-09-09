@@ -1,0 +1,383 @@
+.weight2-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+/* 목표 체중 표시 (그래프 상단) */
+.weight-goal-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background-color: #FFF3F3;
+    font-size: 13px;
+    color: #888888;
+}
+
+.weight-goal-info strong {
+    font-size: 14px;
+    font-weight: 700;
+    color: #FF5A5F;
+}
+
+/* 고정 캘린더 */
+/* ===== 운동 기록 페이지 스타일을 적용한 주간 달력 ===== */
+/* 기존 weight2.css에 있던 .calendar / .week-days / .month-dates / .date-list / .date-btn / .week-btn
+   관련 스타일은 삭제하고 아래 코드로 교체하세요 */
+
+.weight2-week-wrapper {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    padding: 12px 8px;
+}
+
+.weight2-week-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px 10px 8px;
+}
+
+.weight2-week-nav-btn {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #888;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.weight2-week-nav-btn:hover {
+    background-color: #F5F5F5;
+    color: #20D793;
+}
+
+.weight2-week-range {
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+
+.weight2-week {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+.weight2-week-day {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.weight2-week-day:hover {
+    background-color: #F5F5F5;
+}
+
+.weight2-week-weekday {
+    font-size: 11px;
+    color: #aaa;
+    font-weight: 600;
+}
+
+.weight2-week-date {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.weight2-week-day.selected {
+    background-color: #20D793;
+}
+
+.weight2-week-day.selected .weight2-week-weekday,
+.weight2-week-day.selected .weight2-week-date {
+    color: #ffffff;
+}
+
+.weight2-week-today-dot {
+    position: absolute;
+    bottom: 3px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #20D793;
+}
+
+.weight2-week-day.selected .weight2-week-today-dot {
+    background-color: #ffffff;
+}
+
+.weight2-date-header {
+    padding: 16px 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #111;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* 오늘 체중 카드 */
+.weight-weight {
+    width: 100%;
+    margin-top: 14px;
+    padding: 16px 24px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 제목 */
+.weight-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #111111;
+}
+
+/* 입력 영역 */
+.weight-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+/* 체중 입력창 */
+.weight-weight {
+    width: 100%;
+    margin-top: 14px;
+    padding: 14px 24px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.weight-input-log {
+    width: 220px;
+    height: 48px;
+    padding: 0 12px;
+    box-sizing: border-box;
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    border-radius: 10px;
+    background-color: #f7f8f8;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: #111111;
+    text-align: center;
+}
+
+.weight-input-log:focus {
+    border: none;
+    outline: none;
+    background-color: #f7f8f8;
+    box-shadow: none;
+}
+
+/* placeholder */
+.weight-input-log::placeholder {
+    color: #cccccc;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/* 숫자 입력 화살표 제거 */
+.weight-input-log::-webkit-outer-spin-button,
+.weight-input-log::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* kg */
+.weight-unit {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+}
+
+/*버튼 추가*/
+
+/* 오늘 체중 카드 내부 정렬 및 저장 버튼 추가 */
+.weight-input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.weight-input:focus {
+    border-color: #20D793;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(32, 215, 147, 0.15);
+}
+
+
+.weight-unit {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    margin-right: 4px;
+}
+
+/* 체중 전용 저장 버튼 */
+.weight-submit-btn {
+    width: 58px;
+    height: 44px;
+
+    background-color: #20D793;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+    white-space: nowrap;
+
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.weight-submit-btn:hover {
+    background-color: #1cb87e;
+}
+
+.weight-submit-btn:active {
+    transform: scale(0.96);
+}
+
+
+/* 저장/전송 버튼 (민트색 포인트) */
+.submit-btn {
+    width: 64px;
+    height: 42px;
+    background-color: #20D793;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    white-space: nowrap;
+}
+
+.submit-btn:hover {
+    background-color: #1cb87e;
+}
+
+.submit-btn:active {
+    transform: scale(0.96);
+}
+
+/* 저장된 체중 표시 (읽기 전용 상태) */
+.weight-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    padding: 0 0 14px;
+}
+
+
+.weight-display-value {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.weight-display-number {
+    font-size: 34px;
+    font-weight: 800;
+    color: #111111;
+    line-height: 1;
+}
+
+.weight-display-unit {
+    font-size: 15px;
+    font-weight: 600;
+    color: #999999;
+}
+
+.weight-display-badge {
+    margin-top: 4px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: rgba(32, 215, 147, 0.12);
+    color: #1cb87e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/**/
+
+/* 체중 그래프 카드 */
+.weight-graph {
+    width: 100%;
+    margin-top: 14px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 그래프 제목 */
+.graph-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111111;
+}
+
+/* 차트 영역 감싸는 래퍼 (높이 지정 필수) */
+.chart-wrapper {
+    width: 100%;
+    height: 220px;
+    /* 원하는 그래프 높이로 조절 가능 */
+    position: relative;
+}
+
+/**/

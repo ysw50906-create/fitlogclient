@@ -1,0 +1,245 @@
+/* ==========================================
+   전체
+   ========================================== */
+
+.payment-container {
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+    background: #fafafa;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   헤더
+   ========================================== */
+
+.payment-header {
+    margin-bottom: 18px;
+}
+
+.payment-header h2 {
+    margin: 0 0 6px 0;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #1a202c;
+}
+
+.payment-header p {
+    margin: 0;
+
+    font-size: 13px;
+    color: #718096;
+}
+
+
+/* ==========================================
+   플랜 리스트
+   ========================================== */
+
+.plan-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ------------------------------------------
+   플랜 카드
+   ------------------------------------------ */
+
+.plan-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 16px 18px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-1px);
+}
+
+.plan-card-active {
+    border-color: #3182ce;
+    background-color: #f5f9ff;
+}
+
+
+/* 라디오 */
+
+.plan-card-radio {
+    flex-shrink: 0;
+}
+
+.radio-circle {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid #cbd5e0;
+    border-radius: 50%;
+
+    box-sizing: border-box;
+
+    transition: border-color 0.2s ease;
+}
+
+.plan-card-active .radio-circle {
+    border-color: #3182ce;
+}
+
+.radio-dot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: #3182ce;
+}
+
+
+/* 플랜 정보 */
+
+.plan-card-info {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.plan-card-label {
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #2d3748;
+}
+
+.plan-card-period {
+    font-size: 12px;
+    color: #a0aec0;
+}
+
+
+/* 플랜 가격 */
+
+.plan-card-price {
+    flex-shrink: 0;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #3182ce;
+}
+
+
+/* ==========================================
+   결제 요약
+   ========================================== */
+
+.payment-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 18px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+    box-sizing: border-box;
+
+    margin-bottom: 20px;
+}
+
+.payment-summary span {
+    font-size: 14px;
+    color: #718096;
+}
+
+.payment-summary strong {
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #1a202c;
+}
+
+
+/* ==========================================
+   결제하기 버튼
+   ========================================== */
+
+.payment-submit-btn {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 14px;
+
+    background-color: #3182ce;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 16px rgba(49, 130, 206, 0.25);
+
+    transition: background-color 0.2s ease;
+
+    box-sizing: border-box;
+}
+
+.payment-submit-btn:hover {
+    background-color: #2b6cb0;
+}
+
+
+/* ==========================================
+   모바일
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .plan-card {
+        padding: 14px;
+    }
+
+    .payment-submit-btn {
+        font-size: 15px;
+
+        padding: 14px;
+    }
+}
