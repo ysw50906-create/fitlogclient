@@ -1,0 +1,30 @@
+name : React Client
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH로 EC2 접속하여 작업
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_PRIVATE_KEY }}
+
+          script_stop : true
+          script: |
+            cd /home/ubuntu/fitlogclient
+            git pull origin main
+            
+            docker stop reactclient || true
+            docker rm reactclient || true
+
+            docker build --no-cache -t reactclient .
+            docker run -d --name reactclient -p 80:80 reactclient
+            
