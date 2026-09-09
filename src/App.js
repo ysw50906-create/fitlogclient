@@ -30,9 +30,11 @@ import { useState } from 'react';
 
 const HIDE_HEADER_FOOTER_PATHS = ['/login', '/join', '/savekakaoinfo', '/findaccount', '/paypop', '/payment'];
 
-const NO_BACKGROUND_PATHS = ['/login', '/join', '/savekakaoinfo', '/findaccount'];
+const NO_BACKGROUND_PATHS = ['/login', '/join', '/savekakaoinfo', '/findaccount', '/paypop'];
 
 const HIDE_CHAT = ['/login', '/join', '/savekakaoinfo', '/findaccount']
+
+
 
 
 function App() {
