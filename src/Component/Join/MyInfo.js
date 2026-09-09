@@ -190,7 +190,7 @@ function MyInfo({ joinData, onPrev, mode = 'local', onSubmit, isSaving = false }
             </div>
 
             <div className="myinfo-content">
-                <div className="myinfo-section-title">ㅡ샤ㅜ\ㅇㄴㄻ</div>
+                <div className="myinfo-section-title">내 정보</div>
 
                 <div className="myinfo-avatar-wrapper">
                     <div className="myinfo-avatar">
